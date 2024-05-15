@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "E-Typing Retry Shortcut",
+    "version": "1.0",
+    "description": "腕試しレベルチェックの結果画面でSpaceキーを押すことで再挑戦できるようにします。",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.e-typing.ne.jp/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
